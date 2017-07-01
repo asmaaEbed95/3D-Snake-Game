@@ -92,6 +92,9 @@ public class snakeMovement : MonoBehaviour {
 	public void UpdateScore()
 	{
 		GameObject.Find("Score").GetComponent<UnityEngine.UI.Text>().text = "Score: " + this.score;
+		if (score == 5) {
+			Application.LoadLevel (1);
+		}
 	}
 
 	public Material purble, orange;
